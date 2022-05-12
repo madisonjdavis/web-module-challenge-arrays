@@ -46,8 +46,8 @@ Use the copy function below to do the following:
 */
 
 
-function copy(/*your code here*/){
-  /*your code here*/
+function copy(array, originalFlavors){
+  return array;
 }
 
 
@@ -63,8 +63,12 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(/*your code here*/){
-  /*your code here*/
+function is31Flavors(array){
+  if(array.length === 31){
+    return true;
+  }else{
+    return false;
+  }
  }
 
 
@@ -82,10 +86,11 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/){
-  /*your code here*/
+function addFlavor(array, string){
+  array.unshift(string);
+  return array
  }
-
+console.log(addFlavor(originalFlavors, 'Rainbow Sherbert'));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -100,10 +105,11 @@ Use the removeLastFlavor function below to do the following:
 */
 
 
-function removeLastFlavor(/*your code here*/){
- /*your code here*/
+function removeLastFlavor(array, string){
+ array.pop(string);
+ return array
 }
-
+console.log(removeLastFlavor(originalFlavors, 'Rainbow Sherbert'));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
