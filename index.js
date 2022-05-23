@@ -46,10 +46,10 @@ Use the copy function below to do the following:
 */
 
 
-function copy(array, originalFlavors){
-  return array;
+function copy(array){
+  return [...array];
 }
-
+console.log(copy(originalFlavors));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -70,7 +70,7 @@ function is31Flavors(array){
     return false;
   }
  }
-
+console.log(is31Flavors(originalFlavors));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -87,8 +87,8 @@ Use the addFlavor function below to do the following:
 
 
 function addFlavor(array, string){
-  array.unshift(string);
-  return array
+  array.unshift(string)
+  return array;
  }
 console.log(addFlavor(originalFlavors, 'Rainbow Sherbert'));
 
@@ -105,8 +105,8 @@ Use the removeLastFlavor function below to do the following:
 */
 
 
-function removeLastFlavor(array, string){
- array.pop(string);
+function removeLastFlavor(array){
+ array.pop();
  return array
 }
 console.log(removeLastFlavor(originalFlavors, 'Rainbow Sherbert'));
@@ -152,7 +152,7 @@ function removeFlavorByName(array, flavor){
   }
   return array;
 }
-console.log(removeFlavorByName(originalFlavors, 'Chocolate'));
+console.log(removeFlavorByName(originalFlavors, 'Rocky Road'));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -175,7 +175,7 @@ Use the filterByWord function below to do the following:
 
 
 function filterByWord(array, flavor){
-  let filteredArray = [1];
+  let filteredArray = [];
   for(let i = 0; i < array.length; i++){
     if(array[i].includes(flavor)){
       filteredArray.push(array[i]);
@@ -183,8 +183,7 @@ function filterByWord(array, flavor){
   }
   return filteredArray;
 }
-
-console.log(filterByWord(originalFlavors, 'Vanilla')),
+console.log(filterByWord(originalFlavors, 'Chocolate')),
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
 
@@ -320,5 +319,6 @@ module.exports = {
   filterByWord,
   getAverageWordLength,
   getRandomFlavors
+
 }
 
